@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class MyDashboard extends StatefulWidget {
@@ -67,9 +69,148 @@ class _MyDashboardState extends State<MyDashboard> {
                 ),
               ],
             ),
-          )
-        ],
-      ),
+          ),
+          const SizedBox(height: 25,),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                RichText(
+                  text: const TextSpan(
+                    text: "Storage",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "9.1/10 GB",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 16,
+                        )
+                      )
+                    ]),
+                ),
+                const Text(
+                  "Upgrade",
+                  style: TextStyle(
+                    color: Color(0xff006491),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 4,
+                      color: Colors.blue,
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    const Text("Sources",
+                    style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 80,
+                      height: 3,
+                      color: Colors.red,
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    const Text("Docs",
+                      style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 80,
+                      height: 3,
+                      color: Colors.yellow,
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    const Text("Images",
+                      style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 70,
+                      height: 3,
+                      color: Colors.grey[200],
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    const Text("Left",
+                      style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),)
+                  ],
+                )
+              ],
+            ),
+          ),
+          const SizedBox(height: 15,),
+          const Divider(
+            height: 20,
+          ),
+          Expanded(child: ListView(
+            padding: EdgeInsets.all(25),
+            children: [
+              const Text("Catch Up",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),),
+              SizedBox(height: 15,),
+
+              Row(children: [
+                Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                      color: Colors.grey.shade200,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      padding: EdgeInsets.all(38),
+                      height: 110,
+                      child:
+                      Image.asset('assets/img.png',
+                      ),
+                      
+                    )
+                  ],
+                )
+              ],)
+            ],
+          ))
+        ],),
     );
   }
 }
