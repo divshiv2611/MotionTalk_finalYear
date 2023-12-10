@@ -52,6 +52,7 @@ class _MyRegisterState extends State<MyRegister> {
                       height: 30,
                     ),
                     TextField(
+                      keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           fillColor: Colors.grey.shade100,
                           filled: true,
@@ -79,11 +80,10 @@ class _MyRegisterState extends State<MyRegister> {
                       height: 30,
                     ),
                     TextField(
-                      obscureText: true,
                       decoration: InputDecoration(
                           fillColor: Colors.grey.shade100,
                           filled: true,
-                          hintText: 'Password',
+                          hintText: 'Address',
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)
                           )
@@ -93,11 +93,11 @@ class _MyRegisterState extends State<MyRegister> {
                       height: 30,
                     ),
                     TextField(
-                      obscureText: true,
+                      keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           fillColor: Colors.grey.shade100,
                           filled: true,
-                          hintText: 'Confirm Password',
+                          hintText: 'Aadhar Number',
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)
                           )
@@ -118,7 +118,9 @@ class _MyRegisterState extends State<MyRegister> {
                           backgroundColor: Color(0xff006491),
                           child: IconButton(
                             color: Colors.white,
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.pushNamed(context, 'otp');
+                            },
                             icon: Icon(Icons.arrow_forward),
                           ),
                         )

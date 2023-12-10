@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyForgot extends StatefulWidget {
-  const MyForgot({super.key});
+class MyOTP extends StatefulWidget {
+  const MyOTP({super.key});
 
   @override
-  State<MyForgot> createState() => _MyForgotState();
+  State<MyOTP> createState() => _MyOTPState();
 }
 
-class _MyForgotState extends State<MyForgot> {
+class _MyOTPState extends State<MyOTP> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,18 +24,18 @@ class _MyForgotState extends State<MyForgot> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 35, top:50),
-              child: Text('Forgot \nPassword', style: TextStyle(
+              child: Text('OTP \nVerification', style: TextStyle(
                   color: Colors.white,
                   fontSize: 40
               ),),
             ),
             Container(
-              padding: EdgeInsets.only(left: 35, top:225),
-              child: Text('Enter the phone number \nassociated with your account \nto receive OTP',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20
-              ),)
+                padding: EdgeInsets.only(left: 35, top:225),
+                child: Text('We Will send you a one time password on \nthis  Mobile Number \n+91 - XXXXXXXXXX',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20
+                  ),)
             ),
             SingleChildScrollView(
               child: Container(
@@ -46,11 +46,12 @@ class _MyForgotState extends State<MyForgot> {
                 child: Column(
                   children: [
                     TextField(
+                      obscureText: true,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           fillColor: Colors.grey.shade100,
                           filled: true,
-                          hintText: 'Phone Number',
+                          hintText: 'Enter OTP',
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)
                           )
@@ -63,7 +64,7 @@ class _MyForgotState extends State<MyForgot> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text('OTP Verification', style: TextStyle(
+                      children: [Text('Verify OTP', style: TextStyle(
                           color: Color(0xff006491),
                           fontSize: 27, fontWeight: FontWeight.w700),
                       ),
@@ -73,7 +74,7 @@ class _MyForgotState extends State<MyForgot> {
                           child: IconButton(
                             color: Colors.white,
                             onPressed: (){
-                              Navigator.pushNamed(context, 'otp');
+                              Navigator.pushNamed(context, 'setPassword');
                             },
                             icon: Icon(Icons.arrow_forward),
                           ),
