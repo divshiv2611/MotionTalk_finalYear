@@ -342,7 +342,9 @@ class _MyDashboardState extends State<MyDashboard> {
           BoxShadow(color: Colors.white, spreadRadius: 7, blurRadius: 1)
         ]),
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, 'camera');
+          },
           child: const Icon(
             Icons.camera,
             color: Color(0xff006491),

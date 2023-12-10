@@ -1,9 +1,12 @@
 
+
 import 'package:flutter/material.dart';
+import 'package:motion_talk/camera.dart';
 import 'package:motion_talk/dashboard.dart';
 import 'package:motion_talk/forgot.dart';
 import 'package:motion_talk/login.dart';
 import 'package:motion_talk/otp.dart';
+import 'package:motion_talk/post.dart';
 import 'package:motion_talk/register.dart';
 import 'package:motion_talk/setPassword.dart';
 
@@ -17,7 +20,9 @@ void main() {
       'dashboard':(context)=> MyDashboard(),
       'forgot':(context)=>MyForgot(),
       'otp':(context)=>MyOTP(),
-      'setPassword':(context)=>MyPassword()
+      'setPassword':(context)=>MyPassword(),
+      'post':(context)=>MyPost(),
+      'camera':(context)=>MyCamera(),
     },
   ));
 }
